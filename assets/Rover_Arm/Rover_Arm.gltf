@@ -1563,7 +1563,7 @@
     "buffers": [
         {
             "byteLength": 9240480,
-            "uri": "result.bin"
+            "uri": "Rover_Arm.bin"
         }
     ],
     "bufferViews": [
