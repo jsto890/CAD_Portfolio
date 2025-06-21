@@ -12,15 +12,15 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #1a1a1a; /* Dark background */
+      color: #e0e0e0; /* Light text */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     h1 {
       margin: 1rem 0;
-      color: #2c3e50;
+      color: #ffffff;
     }
     /* Gallery grid */
     .gallery {
@@ -32,9 +32,9 @@
       margin-bottom: 2rem;
     }
     .project {
-      background: #fff;
+      background: #2a2a2a; /* Dark card background */
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       overflow: hidden;
       transition: transform 0.2s;
     }
@@ -48,13 +48,13 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #dee2e6;
+      background-color: #333333;
+      border-bottom: 1px solid #444444;
     }
     summary span {
       font-size: 1.1rem;
       font-weight: bold;
-      color: #495057;
+      color: #ffffff;
     }
     /* Hide default marker */
     summary::-webkit-details-marker {
@@ -64,6 +64,7 @@
       content: '▼';
       margin-left: auto;
       transition: transform 0.2s;
+      color: #ffffff;
     }
     details[open] summary::after {
       transform: rotate(180deg);
@@ -71,7 +72,7 @@
     model-viewer {
       width: 100%;
       height: 400px;
-      background-color: #ececec;
+      background-color: #1e1e1e; /* Darker viewer background */
       border: none;
       display: block;
     }
@@ -84,7 +85,7 @@
       align-items: center;
       justify-content: center;
       height: 400px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
       color: white;
       text-align: center;
       padding: 2rem;
@@ -99,12 +100,12 @@
     }
     .project-info {
       padding: 1.5rem;
-      background-color: #f8f9fa;
-      border-top: 1px solid #dee2e6;
+      background-color: #2c2c2c;
+      border-top: 1px solid #444444;
     }
     .project-info h4 {
       margin: 0 0 1rem 0;
-      color: #495057;
+      color: #f0f0f0;
     }
     .project-info ul {
       margin: 0;
@@ -112,7 +113,7 @@
     }
     .project-info li {
       margin: 0.5rem 0;
-      color: #6c757d;
+      color: #bbbbbb;
     }
     .tech-stack {
       display: flex;
@@ -121,8 +122,8 @@
       margin-top: 1rem;
     }
     .tech-tag {
-      background-color: #e9ecef;
-      color: #495057;
+      background-color: #444444;
+      color: #dddddd;
       padding: 0.25rem 0.75rem;
       border-radius: 15px;
       font-size: 0.85rem;
@@ -133,8 +134,8 @@
       align-items: center;
       justify-content: center;
       height: 400px;
-      background-color: #ececec;
-      color: #666;
+      background-color: #1e1e1e;
+      color: #cccccc;
       font-style: italic;
     }
     .debug-info {
@@ -185,7 +186,7 @@
       <summary>
         <span>Robotic Hand Assembly</span>
       </summary>
-      <model-viewer src="assets/Rover_Arm/Rover_Arm.gltf?v=2"
+      <model-viewer src="assets/Hand_Robot/Hand_Robot.gltf?v=2"
                     alt="Robotic Hand Assembly"
                     camera-controls
                     auto-rotate
@@ -213,7 +214,7 @@
       <summary>
         <span>Rover Arm Mechanism</span>
       </summary>
-      <model-viewer src="assets/Hand_Robot/Hand_Robot.gltf?v=2"
+      <model-viewer src="assets/Rover_Arm/Rover_Arm_Cleaned.gltf?v=2"
                     alt="Rover Arm Mechanism"
                     camera-controls
                     auto-rotate
