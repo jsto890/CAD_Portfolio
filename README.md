@@ -14,12 +14,12 @@ This repository serves as a digital portfolio for displaying CAD (Computer-Aided
 
 ```
 CAD_Portfolio/
-├── README.md                           # This file - portfolio overview
-├── index_html                          # Main portfolio webpage
-├── assets/                             # 3D model files and resources
-│   ├── GTI_Implant.gltf               # Medical device model
-│   ├── Hand_Robot.gltf                # Robotic assembly model
-│   └── Rover_Arm.gltf                 # Space rover replica model
+├── README.md                          # This file - portfolio overview
+├── index_html                         # Main portfolio webpage
+├── assets/                            # 3D model files and resources
+│   ├── GTI_Implant                    # Medical device model
+│   ├── Hand_Robot                     # Robotic assembly model
+│   └── Opportunity                    # Space rover replica model
 ├── Greater_Trochanter_Implant/        # Medical device project
 │   └── README.md                      # Detailed project documentation
 ├── Robotic_Hand_Assembly/             # Robotics project
