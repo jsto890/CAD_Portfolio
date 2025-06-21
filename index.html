@@ -127,6 +127,15 @@
       font-size: 0.85rem;
       font-weight: 500;
     }
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      background-color: #ececec;
+      color: #666;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -137,11 +146,13 @@
       <summary>
         <span>Greater Trochanter Implant</span>
       </summary>
-      <div class="placeholder">
-        <h3>Medical Device Design</h3>
-        <p>Orthopedic implant for hip surgery</p>
-        <p>3D model available for viewing</p>
-      </div>
+      <model-viewer src="assets/GTI_Implant/GTI_Implant.gltf" 
+                    alt="Greater Trochanter Implant" 
+                    camera-controls 
+                    auto-rotate
+                    loading="eager"
+                    reveal="interaction">
+      </model-viewer>
       <div class="project-info">
         <h4>Project Overview</h4>
         <ul>
@@ -164,11 +175,13 @@
       <summary>
         <span>Robotic Hand Assembly</span>
       </summary>
-      <div class="placeholder">
-        <h3>Mechanical Assembly</h3>
-        <p>Multi-finger robotic end effector</p>
-        <p>3D model available for viewing</p>
-      </div>
+      <model-viewer src="assets/Hand_Robot/Hand_Robot.gltf" 
+                    alt="Robotic Hand Assembly" 
+                    camera-controls 
+                    auto-rotate
+                    loading="eager"
+                    reveal="interaction">
+      </model-viewer>
       <div class="project-info">
         <h4>Project Overview</h4>
         <ul>
@@ -191,11 +204,13 @@
       <summary>
         <span>Rover Arm Mechanism</span>
       </summary>
-      <div class="placeholder">
-        <h3>Scale Model Replica</h3>
-        <p>1:1 replica of Opportunity rover's arm</p>
-        <p>3D model available for viewing</p>
-      </div>
+      <model-viewer src="assets/Rover_Arm/Rover_Arm.gltf" 
+                    alt="Rover Arm Mechanism" 
+                    camera-controls 
+                    auto-rotate
+                    loading="eager"
+                    reveal="interaction">
+      </model-viewer>
       <div class="project-info">
         <h4>Project Overview</h4>
         <ul>
