@@ -4,7 +4,11 @@ A professional portfolio showcasing 3D CAD models and engineering design project
 
 ## 🎯 Purpose
 
-This repository serves as a digital portfolio for displaying CAD (Computer-Aided Design) projects with interactive 3D visualization. It's designed to showcase engineering design skills, technical expertise, and project capabilities to potential employers, collaborators, or clients.
+This repository serves as a digital portfolio for displaying CAD (Computer-Aided Design) projects with an interactive 3D viewer. It's designed to showcase engineering design skills and project capabilities.
+
+## 🚀 Live Demo
+
+**You can view the live portfolio here:** [jsto890.github.io/CAD_Portfolio/](https://jsto890.github.io/CAD_Portfolio/)
 
 ## 🏗️ Project Structure
 
@@ -53,8 +57,3 @@ CAD_Portfolio/
 2. **Explore**: Click on individual projects to view 3D models
 3. **Read**: Check each project's README for detailed information
 4. **Interact**: Use mouse/touch controls to manipulate 3D views
-
-### Local Development
-- Clone the repository
-- Open `index_html` in a web browser
-- No build process required - pure HTML/CSS/JS
