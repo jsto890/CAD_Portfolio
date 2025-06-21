@@ -252,16 +252,21 @@
     // Add error handling for model loading
     document.addEventListener('DOMContentLoaded', function() {
       const modelViewers = document.querySelectorAll('model-viewer');
+      const debugDiv = document.createElement('div');
+      debugDiv.className = 'debug-info';
+      debugDiv.innerHTML = '<strong>Loading Status:</strong><br>';
+      document.body.insertBefore(debugDiv, document.querySelector('.gallery'));
       
-      modelViewers.forEach(viewer => {
+      modelViewers.forEach((viewer, index) => {
+        const projectNames = ['GTI Implant', 'Hand Robot', 'Rover Arm'];
+        
         // Add loading indicator
         viewer.addEventListener('loading', function() {
-          console.log('Model loading started:', viewer.src);
+          debugDiv.innerHTML += `${projectNames[index]}: Loading started<br>`;
         });
         
         viewer.addEventListener('error', function(event) {
-          console.error('Model loading error:', event.detail);
-          console.error('Error source:', viewer.src);
+          debugDiv.innerHTML += `${projectNames[index]}: ERROR - ${event.detail}<br>`;
           // Replace with placeholder content
           const placeholder = document.createElement('div');
           placeholder.className = 'placeholder';
@@ -274,21 +279,20 @@
         });
         
         viewer.addEventListener('load', function() {
-          console.log('Model loaded successfully:', viewer.src);
-          console.log('Model viewer element:', viewer);
+          debugDiv.innerHTML += `${projectNames[index]}: Loaded successfully<br>`;
         });
         
         // Add progress tracking
         viewer.addEventListener('progress', function(event) {
-          console.log('Loading progress:', event.detail);
+          debugDiv.innerHTML += `${projectNames[index]}: Progress ${event.detail}<br>`;
         });
         
         // Check if model-viewer is working
         setTimeout(() => {
           if (viewer.model) {
-            console.log('Model object available:', viewer.model);
+            debugDiv.innerHTML += `${projectNames[index]}: Model object available<br>`;
           } else {
-            console.warn('No model object available for:', viewer.src);
+            debugDiv.innerHTML += `${projectNames[index]}: No model object available<br>`;
           }
         }, 2000);
       });
