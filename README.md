@@ -4,7 +4,7 @@ A professional portfolio showcasing 3D CAD models and engineering design project
 
 ## 🎯 Purpose
 
-This repository serves as a digital portfolio for displaying CAD (Computer-Aided Design) projects with an interactive 3D viewer. It's designed to showcase engineering design skills and project capabilities.
+This repository serves as a digital portfolio for displaying my CAD (Computer-Aided Design) projects with an interactive 3D viewer.
 
 ## 🚀 Live Demo
 
@@ -54,6 +54,6 @@ CAD_Portfolio/
 
 ### Understanding Projects
 1. **Browse**: Start with the main portfolio page
-2. **Explore**: Click on individual projects to view 3D models
+2. **Explore**: Click on the link to view 3D models
 3. **Read**: Check each project's README for detailed information
 4. **Interact**: Use mouse/touch controls to manipulate 3D views
