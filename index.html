@@ -150,15 +150,7 @@
 </head>
 <body>
   <h1>My CAD Projects</h1>
-  
-  <!-- Debug Info -->
-  <div class="debug-info">
-    <strong>Debug Info:</strong><br>
-    - Check browser console (F12) for loading messages<br>
-    - Models should load with cache-busting parameter ?v=2<br>
-    - Binary files: GTI_Implant.bin, Hand_Robot.bin, Rover_Arm.bin
-  </div>
-  
+
   <div class="gallery">
     <!-- Project 1 -->
     <details class="project">
@@ -193,7 +185,7 @@
       <summary>
         <span>Robotic Hand Assembly</span>
       </summary>
-      <model-viewer src="assets/Hand_Robot/Hand_Robot.gltf?v=2"
+      <model-viewer src="assets/Rover_Arm/Rover_Arm.gltf?v=2"
                     alt="Robotic Hand Assembly"
                     camera-controls
                     auto-rotate
@@ -221,7 +213,7 @@
       <summary>
         <span>Rover Arm Mechanism</span>
       </summary>
-      <model-viewer src="assets/Rover_Arm/Rover_Arm.gltf?v=2"
+      <model-viewer src="assets/Hand_Robot/Hand_Robot.gltf?v=2"
                     alt="Rover Arm Mechanism"
                     camera-controls
                     auto-rotate
@@ -244,57 +236,6 @@
       </div>
     </details>
   </div>
-
-  <script>
-    // Add error handling for model loading
-    document.addEventListener('DOMContentLoaded', function() {
-      const modelViewers = document.querySelectorAll('model-viewer');
-      const debugDiv = document.createElement('div');
-      debugDiv.className = 'debug-info';
-      debugDiv.innerHTML = '<strong>Loading Status:</strong><br>';
-      document.body.insertBefore(debugDiv, document.querySelector('.gallery'));
-      
-      modelViewers.forEach((viewer, index) => {
-        const projectNames = ['GTI Implant', 'Hand Robot', 'Rover Arm'];
-        
-        // Add loading indicator
-        viewer.addEventListener('loading', function() {
-          debugDiv.innerHTML += `${projectNames[index]}: Loading started<br>`;
-        });
-        
-        viewer.addEventListener('error', function(event) {
-          debugDiv.innerHTML += `${projectNames[index]}: ERROR - ${event.detail}<br>`;
-          // Replace with placeholder content
-          const placeholder = document.createElement('div');
-          placeholder.className = 'placeholder';
-          placeholder.innerHTML = `
-            <h3>3D Model Error</h3>
-            <p>Error loading model: ${event.detail}</p>
-            <p>Check console for details</p>
-          `;
-          viewer.parentNode.replaceChild(placeholder, viewer);
-        });
-        
-        viewer.addEventListener('load', function() {
-          debugDiv.innerHTML += `${projectNames[index]}: Loaded successfully<br>`;
-        });
-        
-        // Add progress tracking
-        viewer.addEventListener('progress', function(event) {
-          debugDiv.innerHTML += `${projectNames[index]}: Progress ${event.detail}<br>`;
-        });
-        
-        // Check if model-viewer is working
-        setTimeout(() => {
-          if (viewer.model) {
-            debugDiv.innerHTML += `${projectNames[index]}: Model object available<br>`;
-          } else {
-            debugDiv.innerHTML += `${projectNames[index]}: No model object available<br>`;
-          }
-        }, 2000);
-      });
-    });
-  </script>
 
   <!-- Instructions:
     1. Place your .gltf files and thumbnail images in the 'assets' folder of your repo.
