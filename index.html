@@ -73,6 +73,7 @@
       height: 400px;
       background-color: #ececec;
       border: none;
+      display: block;
     }
     details > model-viewer {
       display: block;
@@ -136,10 +137,28 @@
       color: #666;
       font-style: italic;
     }
+    .debug-info {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <h1>My CAD Projects</h1>
+  
+  <!-- Debug Info -->
+  <div class="debug-info">
+    <strong>Debug Info:</strong><br>
+    - Check browser console (F12) for loading messages<br>
+    - Models should load with cache-busting parameter ?v=2<br>
+    - Binary files: GTI_Implant.bin, Hand_Robot.bin, Rover_Arm.bin
+  </div>
+  
   <div class="gallery">
     <!-- Project 1 -->
     <details class="project">
@@ -235,22 +254,43 @@
       const modelViewers = document.querySelectorAll('model-viewer');
       
       modelViewers.forEach(viewer => {
+        // Add loading indicator
+        viewer.addEventListener('loading', function() {
+          console.log('Model loading started:', viewer.src);
+        });
+        
         viewer.addEventListener('error', function(event) {
           console.error('Model loading error:', event.detail);
+          console.error('Error source:', viewer.src);
           // Replace with placeholder content
           const placeholder = document.createElement('div');
           placeholder.className = 'placeholder';
           placeholder.innerHTML = `
-            <h3>3D Model</h3>
-            <p>Model data temporarily unavailable</p>
-            <p>Please check project documentation for details</p>
+            <h3>3D Model Error</h3>
+            <p>Error loading model: ${event.detail}</p>
+            <p>Check console for details</p>
           `;
           viewer.parentNode.replaceChild(placeholder, viewer);
         });
         
         viewer.addEventListener('load', function() {
           console.log('Model loaded successfully:', viewer.src);
+          console.log('Model viewer element:', viewer);
         });
+        
+        // Add progress tracking
+        viewer.addEventListener('progress', function(event) {
+          console.log('Loading progress:', event.detail);
+        });
+        
+        // Check if model-viewer is working
+        setTimeout(() => {
+          if (viewer.model) {
+            console.log('Model object available:', viewer.model);
+          } else {
+            console.warn('No model object available for:', viewer.src);
+          }
+        }, 2000);
       });
     });
   </script>
