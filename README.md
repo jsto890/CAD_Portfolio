@@ -48,12 +48,11 @@ CAD_Portfolio/
 ## 🚀 Getting Started
 
 ### Viewing the Portfolio
-1. **Online**: Visit the GitHub Pages site (when deployed)
-2. **Local**: Open `index_html` in any modern web browser
-3. **Interactive**: Click on project titles to expand and view 3D models
+1. **Online**: Visit the GitHub Pages site
+2. **Interactive**: Click on project titles to expand and view 3D models
 
 ### Understanding Projects
 1. **Browse**: Start with the main portfolio page
-2. **Explore**: Click on the link to view 3D models
+2. **Explore**: Click on the project tabs to view each project
 3. **Read**: Check each project's README for detailed information
 4. **Interact**: Use mouse/touch controls to manipulate 3D views
